@@ -1,0 +1,24 @@
+{
+  "name": "e-voting-nid2",
+  "version": "1.0.0",
+  "description": "This is an e-voting system server built with nodejs server redering ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ibukunoluwamide/E-voting-system-server.git"
+  },
+  "author": "Olamide and Mayowa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ibukunoluwamide/E-voting-system-server/issues"
+  },
+  "homepage": "https://github.com/Ibukunoluwamide/E-voting-system-server#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.0"
+  }
+}
