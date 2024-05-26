@@ -23,8 +23,8 @@ app.use("/api/users", userRoutes);
 app.use("/api/parties", partyRoute);
 
 // Error handling middleware
-// app.use(notFound);
-// app.use(errorHandler);
+app.use(notFound);
+app.use(errorHandler);
 
 // Swagger UI
 const swaggerUi = require('swagger-ui-express');
