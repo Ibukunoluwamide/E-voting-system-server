@@ -23,10 +23,10 @@ app.use("/api/users", userRoutes);
 app.use("/api/parties", partyRoute);
 
 // Swagger UI
-const swaggerUi = require('swagger-ui-express');
-const swaggerDocument = require('./swagger-output.json');
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger-output.json");
 
-app.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use("/api/v1/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 // Error handling middleware
 app.use(notFound);
 app.use(errorHandler);
