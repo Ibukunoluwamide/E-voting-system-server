@@ -22,15 +22,15 @@ app.use(cookieParser());
 app.use("/api/users", userRoutes);
 app.use("/api/parties", partyRoute);
 
-// Error handling middleware
-app.use(notFound);
-app.use(errorHandler);
-
 // Swagger UI
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger-output.json');
 
 app.use('/api/v1/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+// Error handling middleware
+app.use(notFound);
+app.use(errorHandler);
+
 app.listen(PORT, () => {
   console.log(`E-Voting Server has started on port ${PORT}..`);
 });
