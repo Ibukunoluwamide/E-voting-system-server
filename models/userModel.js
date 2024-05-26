@@ -37,6 +37,9 @@ const userSchema = mongoose.Schema(
       required: true,
       unique: true,
     },
+    votedParties: [
+      { type: mongoose.Schema.Types.ObjectId, ref: "Party", default: [] },
+    ],
     username: {
       type: String,
       required: true,

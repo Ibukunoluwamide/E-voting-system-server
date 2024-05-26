@@ -181,9 +181,54 @@ const getUserProfile = asyncHandler(async (req, res) => {
   res.status(200).json(user);
 });
 
+// @desc Update user profile
+// route PUT /api/users/profile
+// @access Private
+const updateUserProfile = asyncHandler(async (req, res) => {
+  const user = await User.findById(req.user._id);
+
+  if (!user) {
+    res.status(404);
+    throw new Error("User not found");
+  }
+
+  // Check if request body is empty
+  if (Object.keys(req.body).length === 0) {
+    res.status(400);
+    throw new Error("All Fields Are Required ....");
+  }
+
+  // Define the fields that can be updated and their corresponding user object fields
+  const fieldsToUpdate = {
+    fullname: "name",
+    dateOfBirth: "dateOfBirth",
+    address: "address",
+    governmentIdNumber: "governmentIdNumber",
+    email: "email",
+    phoneNumber: "phoneNumber",
+    username: "username",
+    password: "password",
+  };
+
+  // Iterate over the fields and update user properties dynamically
+  Object.keys(fieldsToUpdate).forEach((field) => {
+    if (req.body[field]) {
+      user[fieldsToUpdate[field]] = req.body[field];
+    }
+  });
+
+  const updatedUser = await user.save();
+
+  res.status(200).json({
+    message: "Profile Updated Successfully...",
+    updatedUser,
+  });
+});
+
 module.exports = {
   authUser,
   registerUser,
   getUserProfile,
   logoutUser,
+  updateUserProfile,
 };

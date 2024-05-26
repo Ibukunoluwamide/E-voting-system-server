@@ -1,0 +1,52 @@
+[
+  {
+    "name": "All Progressives Congress (APC)",
+    "description": "The ruling party in Nigeria, founded in 2013. It advocates for progressivism, social democracy, and economic populism.",
+    "candidate": "Bola Ahmed Tinubu"
+  },
+  {
+    "name": "People's Democratic Party (PDP)",
+    "description": "Established in 1998, the PDP is one of the dominant parties in Nigeria, with a centrist ideology focused on social democracy and liberal policies.",
+    "candidate": "Atiku Abubakar"
+  },
+  {
+    "name": "Labour Party (LP)",
+    "description": "The Labour Party emphasizes social justice, workers' rights, and egalitarianism. It advocates for labor issues and the Nigerian workforce.",
+    "candidate": "Peter Obi"
+  },
+  {
+    "name": "All Progressives Grand Alliance (APGA)",
+    "description": "Founded in 2002, APGA focuses on nationalism, decentralization of power, and restructuring the nation, especially influential in southeastern Nigeria.",
+    "candidate": "Peter Umeadi"
+  },
+  {
+    "name": "Social Democratic Party (SDP)",
+    "description": "Promotes social democracy and advocates for progressive policies and social welfare programs.",
+    "candidate": "Adewole Adebayo"
+  },
+  {
+    "name": "New Nigeria People's Party (NNPP)",
+    "description": "Provides an alternative to the established parties, focusing on good governance, transparency, and socio-economic development.",
+    "candidate": "Rabiu Kwankwaso"
+  },
+  {
+    "name": "African Democratic Congress (ADC)",
+    "description": "Formed in 2006, the ADC advocates for democracy, good governance, and socio-economic development, aiming to address issues like corruption and poverty.",
+    "candidate": "Kachikwu Dumebi"
+  },
+  {
+    "name": "Young Progressive Party (YPP)",
+    "description": "Established in 2017, the YPP focuses on youth empowerment, good governance, and leveraging technology for economic growth, involving young Nigerians in the political process.",
+    "candidate": "Malik Ado-Ibrahim"
+  },
+  {
+    "name": "African Action Congress (AAC)",
+    "description": "Created in 2018 by Omoyele Sowore, the AAC advocates for social democracy, progressivism, and participatory democracy, with a focus on radical change and activism.",
+    "candidate": "Omoyele Sowore"
+  },
+  {
+    "name": "Action Democratic Party (ADP)",
+    "description": "Formed in 2017, the ADP champions good governance, transparency, and accountability, aiming to address Nigeria's socio-economic challenges through inclusive policies.",
+    "candidate": "Sani Yabagi Yusuf"
+  }
+]

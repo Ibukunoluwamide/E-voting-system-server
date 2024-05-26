@@ -4,6 +4,7 @@ const connectDB = require("./config/db");
 const cookieParser = require("cookie-parser");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const userRoutes = require("./routes/user.route");
+const partyRoute = require("./routes/party.route");
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ app.use(cookieParser());
 
 // User Routes
 app.use("/api/users", userRoutes);
+app.use("/api/parties", partyRoute);
 
 // Error handling middleware
 app.use(notFound);
