@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "66528be4e9e40076127c0c86"
+  },
+  "fullname": "John Doe",
+  "dateOfBirth": {
+    "$date": "2001-01-01T00:00:00.000Z"
+  },
+  "address": "123 Main St, Springfield, IL",
+  "governmentIdNumber": "9090909090",
+  "age": "23",
+  "email": "dev@gmail.com",
+  "eligible": true,
+  "phoneNumber": "09077877472",
+  "username": "techiemayowa",
+  "password": "$2a$10$agH3da25lB3FHeh31E/ul.fKCKmsQVPmv275tXUUQEzd0Wi66PvOa",
+  "createdAt": {
+    "$date": "2024-05-26T01:09:56.804Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-26T08:57:22.715Z"
+  },
+  "__v": 3
+}]

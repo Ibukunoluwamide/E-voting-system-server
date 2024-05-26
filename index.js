@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors"); 
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const cookieParser = require("cookie-parser");
@@ -17,6 +18,9 @@ const PORT = process.env.PORT || 3500;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+
+// Enable CORS
+app.use(cors()); // Use cors middleware
 
 // User Routes
 app.use("/api/users", userRoutes);
