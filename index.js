@@ -41,9 +41,14 @@ app.use((req, res, next) => {
 // Enable CORS
 app.use(
   cors({
-    origin: "*",
-    // origin: process.env.FRONTEND_URL,
+    origin: process.env.FRONTEND_URL || "*",
     credentials: true,
+    methods: ["GET", "PUT", "POST"],
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+      "Access-Control-Allow-Credentials",
+    ],
   })
 );
 
