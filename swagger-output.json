@@ -8,7 +8,7 @@
   "host": "e-voting-system-server.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/api/users/login": {
