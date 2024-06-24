@@ -84,4 +84,7 @@ const voteCounts = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { getParties, voteParty, userVote, voteCounts };
+const partyVotes = asyncHandler(async (req, res) => {
+  
+});
+module.exports = { getParties, voteParty, userVote, voteCounts, partyVotes };

@@ -1,9 +1,19 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
+// const bcrypt = require("bcryptjs");
 
 const userSchema = mongoose.Schema(
   {
-    fullname: {
+    NIN: {
+      type: Number,
+      required: true,
+      unique: true,
+    },
+    voterID: {
+      type: Number,
+      required: true,
+      unique: true,
+    },
+    fullName: {
       type: String,
       required: true,
     },
@@ -11,43 +21,69 @@ const userSchema = mongoose.Schema(
       type: Date,
       required: true,
     },
+    gender: {
+      type: String,
+      enum: ["Male", "Female"],
+    },
     address: {
       type: String,
       required: true,
     },
-    governmentIdNumber: {
+    contactInfo: {
       type: String,
       required: true,
-      unique: true,
     },
-    age: {
+    maritalStatus: {
+      type: String,
+      enum: ["Single", "Married", "Divorced", "Widowed"],
+    },
+    employmentStatus: {
+      type: String,
+      enum: ["Employed", "Unemployed", "Student", "Retired"],
+    },
+    employerDetails: {
       type: String,
     },
-    email: {
+    taxCode: {
       type: String,
-      required: true,
-      unique: true,
     },
-    eligible: {
-      type: Boolean,
-      default: false,
-    },
-    phoneNumber: {
+    nationality: {
       type: String,
-      required: true,
-      unique: true,
     },
-    votedParties: [
-      { type: mongoose.Schema.Types.ObjectId, ref: "Party", default: [] },
-    ],
-    username: {
-      type: String,
-      required: true,
-      unique: true,
+    dateOfIssueOfNIN: {
+      type: Date,
     },
-    password: {
+    placeOfBirth: {
       type: String,
-      required: true,
+    },
+    previousAddresses: {
+      type: [String],
+    },
+    benefitsReceived: {
+      type: [String],
+    },
+    contributionRecord: {
+      type: String,
+    },
+    immigrationStatus: {
+      type: String,
+      enum: ["Citizen", "Resident", "Non-Resident"],
+    },
+    healthInfo: {
+      type: String,
+    },
+    dependentsInfo: {
+      type: String,
+    },
+    educationAndQualifications: {
+      type: String,
+    },
+    criminalRecord: {
+      type: String,
+    },
+    disabilityStatus: {
+      type: String,
+      enum: ["Yes", "No"],
     },
   },
   {
@@ -55,19 +91,19 @@ const userSchema = mongoose.Schema(
   }
 );
 
-userSchema.pre("save", async function (next) {
-  if (!this.isModified("password")) {
-    next();
-  }
+// userSchema.pre("save", async function (next) {
+//   if (!this.isModified("password")) {
+//     next();
+//   }
 
-  const salt = await bcrypt.genSalt(10);
-  this.password = await bcrypt.hash(this.password, salt);
-  next();
-});
+//   const salt = await bcrypt.genSalt(10);
+//   this.password = await bcrypt.hash(this.password, salt);
+//   next();
+// });
 
-userSchema.methods.matchPassword = async function (enteredPassword) {
-  return await bcrypt.compare(enteredPassword, this.password);
-};
+// userSchema.methods.matchPassword = async function (enteredPassword) {
+//   return await bcrypt.compare(enteredPassword, this.password);
+// };
 
 const User = mongoose.model("User", userSchema);
 

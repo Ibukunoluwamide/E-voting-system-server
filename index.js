@@ -1,5 +1,5 @@
 const express = require("express");
-const cors = require("cors"); 
+const cors = require("cors");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const cookieParser = require("cookie-parser");
@@ -19,8 +19,38 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+// Define a middleware function to log requests
+app.use((req, res, next) => {
+  console.log(`Request received: ${req.method} ${req.url}`);
+  if (Object.keys(req.body).length !== 0) {
+    console.log(`Request body: ${JSON.stringify(req.body)}`);
+  }
+  next();
+});
+
+// Define a middleware function to log responses
+app.use((req, res, next) => {
+  const originalSend = res.send;
+  res.send = function (body) {
+    originalSend.call(this, body);
+    console.log(`Response sent: ${JSON.stringify(body)}`);
+  };
+  next();
+});
+
 // Enable CORS
-app.use(cors()); // Use cors middleware
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL || "*",
+    credentials: true,
+    methods: ["GET", "PUT", "POST"],
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+      "Access-Control-Allow-Credentials",
+    ],
+  })
+);
 
 // User Routes
 app.use("/api/users", userRoutes);
