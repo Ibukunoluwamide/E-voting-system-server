@@ -52,6 +52,9 @@ app.use(
   })
 );
 
+// Enable CORS
+app.use(cors());
+
 // User Routes
 app.use("/api/users", userRoutes);
 app.use("/api/parties", partyRoute);
