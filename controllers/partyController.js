@@ -3,24 +3,14 @@ const asyncHandler = require("express-async-handler");
 const Party = require("../models/partyModel.js");
 const User = require("../models/userModel.js");
 
-const fs = require('fs');
-const path = require('path');
-
 // @desc Party // Endpoint to retrieve political parties
 // route POST /api/party/parties
 // @access Public
 
 const getParties = asyncHandler(async (req, res) => {
   try {
-    const filePath = path.join(__dirname, '../controlpanel/parties.json'); // Adjust the path as needed
-    fs.readFile(filePath, 'utf8', (err, data) => {
-      if (err) {
-        res.status(500).json({ message: err.message });
-      } else {
-        const parties = JSON.parse(data);
-        res.json(parties);
-      }
-    });
+    const parties = await Party.find();
+    res.json(parties);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

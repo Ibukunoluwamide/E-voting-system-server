@@ -9,14 +9,14 @@ const {
 
 const router = express.Router();
 
-router.get("/parties", getParties);
+router.route("/parties").get(protect, getParties);
 
 // Endpoint to cast votes
-router.post("/vote",  voteParty);
+router.post("/vote", protect, voteParty);
 // Endpoint to retrieve the parties a user has voted for
-router.get("/userVotes/:username",  userVote);
+router.get("/userVotes/:username", protect, userVote);
 // Endpoint to retrieve vote counts
-router.get("/voteCounts", voteCounts);
+router.get("/voteCounts", protect, voteCounts);
 // router.route("/").get(protect, getUserProfile);
 
 module.exports = router;
