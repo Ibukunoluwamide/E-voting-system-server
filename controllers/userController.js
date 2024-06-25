@@ -1,5 +1,5 @@
 const asyncHandler = require("express-async-handler");
-const generateToken = require("../utils/generateToken.js");
+const { generateToken } = require("../utils/generateToken.js");
 const User = require("../models/userModel.js");
 
 // @desc Auth user/set token
@@ -18,7 +18,6 @@ const authUser = asyncHandler(async (req, res) => {
   const user = await User.findOne({
     $or: [{ voterID: voterID }, { NIN: NIN }],
   });
-  console.log(user);
 
   if (!user) {
     throw new Error(
@@ -27,14 +26,16 @@ const authUser = asyncHandler(async (req, res) => {
   }
 
   const credentialUsed = voterID ? "voterID" : "NIN";
-  console.log(`User logged in using ${credentialUsed}`);
-
-  generateToken(res, user._id);
+  res.cookie("jwt", generateToken(user._id), {
+    expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days
+    httpOnly: true,
+  });
 
   res.status(200).json({
     message: "Logged In Successfully",
     credentialUsed,
     user: user,
+    token: generateToken(user._id),
   });
 });
 // @desc Logout user
