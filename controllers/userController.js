@@ -26,15 +26,10 @@ const authUser = asyncHandler(async (req, res) => {
   }
 
   const credentialUsed = voterID ? "voterID" : "NIN";
-  res.cookie("jwt", generateToken(user._id), {
-    expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days
-    httpOnly: true,
-  });
-
   res.status(200).json({
     message: "Logged In Successfully",
     credentialUsed,
-    user: user,
+    user,
     token: generateToken(user._id),
   });
 });
