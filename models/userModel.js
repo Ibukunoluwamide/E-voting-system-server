@@ -85,6 +85,11 @@ const userSchema = mongoose.Schema(
       type: String,
       enum: ["Yes", "No"],
     },
+    votedParties: {
+      type: [mongoose.Schema.Types.ObjectId],
+      ref: "Party",
+      default: [],
+    },
   },
   {
     timestamps: true,

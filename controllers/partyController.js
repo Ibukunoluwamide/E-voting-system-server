@@ -17,10 +17,10 @@ const getParties = asyncHandler(async (req, res) => {
 });
 
 const voteParty = asyncHandler(async (req, res) => {
-  const { username, partyId } = req.body;
+  const { fullName, partyId } = req.body;
 
   try {
-    const user = await User.findOne({ username });
+    const user = await User.findOne({ fullName });
     const party = await Party.findById(partyId);
 
     if (!party) {
@@ -51,9 +51,11 @@ const voteParty = asyncHandler(async (req, res) => {
 
     res.json({ message: "Vote cast successfully", party: updatedParty });
   } catch (error) {
+    console.log(error);
     res.status(500).json({ message: error.message });
   }
 });
+
 const userVote = asyncHandler(async (req, res) => {
   try {
     const { username } = req.params;
@@ -84,7 +86,5 @@ const voteCounts = asyncHandler(async (req, res) => {
   }
 });
 
-const partyVotes = asyncHandler(async (req, res) => {
-  
-});
+const partyVotes = asyncHandler(async (req, res) => {});
 module.exports = { getParties, voteParty, userVote, voteCounts, partyVotes };
