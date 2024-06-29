@@ -5,7 +5,7 @@ const partySchema = new mongoose.Schema({
   partyPicture: { type: String },
   icon: { type: String },
   candidate: { type: String },
-  votes: { type: Number, default: 0 },
+  votes: { type: String },
 });
 
 const Party = mongoose.model("Party", partySchema);
