@@ -1,0 +1,330 @@
+[{
+  "_id": {
+    "$oid": "665f4d349cb890818c982b4c"
+  },
+  "NIN": {
+    "$numberLong": "34567890987"
+  },
+  "fullName": "John Doe",
+  "dateOfBirth": {
+    "$date": "2001-01-01T00:00:00.000Z"
+  },
+  "gender": "Male",
+  "address": "123 Main St, Springfield, IL",
+  "contactInfo": "john.doe@example.com, 555-555-5555",
+  "maritalStatus": "Single",
+  "employmentStatus": "Employed",
+  "employerDetails": "ABC Corporation",
+  "taxCode": "1234",
+  "nationality": "American",
+  "dateOfIssueOfNIN": "2010-01-01",
+  "placeOfBirth": "Anytown, USA",
+  "previousAddresses": [
+    "456 Elm St, Anytown, USA"
+  ],
+  "benefitsReceived": [],
+  "voterID": {
+    "$numberLong": "34893038303"
+  },
+  "contributionRecord": "Employed since 2015",
+  "immigrationStatus": "Citizen",
+  "healthInfo": "None",
+  "dependentsInfo": "None",
+  "educationAndQualifications": "Bachelor's degree in Computer Science",
+  "criminalRecord": null,
+  "disabilityStatus": "No",
+  "updatedAt": {
+    "$date": "2024-06-24T19:58:25.086Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "665f4d349cb890818c982b4d"
+  },
+  "NIN": {
+    "$numberLong": "9876543210"
+  },
+  "fullName": "Jane Smith",
+  "dateOfBirth": "1992-02-02",
+  "gender": "Female",
+  "address": "789 Oak St, Othertown, USA",
+  "contactInfo": "jane.smith@example.com, 555-555-5556",
+  "maritalStatus": "Married",
+  "employmentStatus": "Unemployed",
+  "employerDetails": "None",
+  "taxCode": "5678",
+  "nationality": "American",
+  "voterID": {
+    "$numberLong": "45678234567"
+  },
+  "dateOfIssueOfNIN": "2012-01-01",
+  "placeOfBirth": "Othertown, USA",
+  "previousAddresses": [
+    "321 Pine St, Othertown, USA"
+  ],
+  "benefitsReceived": [
+    "Unemployment benefits"
+  ],
+  "contributionRecord": "None",
+  "immigrationStatus": "Citizen",
+  "healthInfo": "None",
+  "dependentsInfo": "2 children",
+  "educationAndQualifications": "High school diploma",
+  "criminalRecord": null,
+  "disabilityStatus": "No",
+  "__v": 5,
+  "updatedAt": {
+    "$date": "2024-06-29T12:55:42.645Z"
+  },
+  "votedParties": [
+    {
+      "$oid": "667f35409beeaf8a5e8c3d34"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "665f4d349cb890818c982b4e"
+  },
+  "NIN": {
+    "$numberLong": "53030303030"
+  },
+  "fullName": "Bob Johnson",
+  "dateOfBirth": "1985-03-03",
+  "gender": "Male",
+  "address": "901 Maple St, Thistown, USA",
+  "contactInfo": "bob.johnson@example.com, 555-555-5557",
+  "maritalStatus": "Divorced",
+  "employmentStatus": "Self-Employed",
+  "employerDetails": "Own business",
+  "taxCode": "9012",
+  "nationality": "American",
+  "dateOfIssueOfNIN": "2015-01-01",
+  "placeOfBirth": "Thistown, USA",
+  "previousAddresses": [
+    "678 Birch St, Thistown, USA"
+  ],
+  "benefitsReceived": [],
+  "contributionRecord": "Self-employed since 2016",
+  "immigrationStatus": "Citizen",
+  "healthInfo": "None",
+  "dependentsInfo": "None",
+  "educationAndQualifications": "Associate's degree in Business Administration",
+  "criminalRecord": null,
+  "disabilityStatus": "No",
+  "voterID": {
+    "$numberLong": "41283945672"
+  }
+},
+{
+  "_id": {
+    "$oid": "665f4d349cb890818c982b4f"
+  },
+  "NIN": 1234567890,
+  "fullName": "John Doe",
+  "dateOfBirth": "1990-01-01",
+  "gender": "Male",
+  "address": "123 Main St, Anytown, USA",
+  "contactInfo": "john.doe@example.com, 555-555-5555",
+  "maritalStatus": "Single",
+  "employmentStatus": "Employed",
+  "employerDetails": "ABC Corporation",
+  "taxCode": "1234",
+  "voterID": {
+    "$numberLong": "91230983467"
+  },
+  "nationality": "American",
+  "dateOfIssueOfNIN": "2010-01-01",
+  "placeOfBirth": "Anytown, USA",
+  "previousAddresses": [
+    "456 Elm St, Anytown, USA"
+  ],
+  "benefitsReceived": [],
+  "contributionRecord": "Employed since 2015",
+  "immigrationStatus": "Citizen",
+  "healthInfo": "None",
+  "dependentsInfo": "None",
+  "educationAndQualifications": "Bachelor's degree in Computer Science",
+  "criminalRecord": null,
+  "disabilityStatus": "No"
+},
+{
+  "_id": {
+    "$oid": "665f4d349cb890818c982b50"
+  },
+  "NIN": {
+    "$numberLong": "33333333333"
+  },
+  "fullName": "Jane Smith",
+  "dateOfBirth": "1992-02-02",
+  "gender": "Female",
+  "address": "789 Oak St, Othertown, USA",
+  "contactInfo": "jane.smith@example.com, 555-555-5556",
+  "maritalStatus": "Married",
+  "employmentStatus": "Unemployed",
+  "employerDetails": "None",
+  "taxCode": "5678",
+  "voterID": {
+    "$numberLong": "69889012348"
+  },
+  "nationality": "American",
+  "dateOfIssueOfNIN": "2012-01-01",
+  "placeOfBirth": "Othertown, USA",
+  "previousAddresses": [
+    "321 Pine St, Othertown, USA"
+  ],
+  "benefitsReceived": [
+    "Unemployment benefits"
+  ],
+  "contributionRecord": "None",
+  "immigrationStatus": "Citizen",
+  "healthInfo": "None",
+  "dependentsInfo": "2 children",
+  "educationAndQualifications": "High school diploma",
+  "criminalRecord": null,
+  "disabilityStatus": "No"
+},
+{
+  "_id": {
+    "$oid": "665f4d349cb890818c982b51"
+  },
+  "NIN": {
+    "$numberLong": "5555555555"
+  },
+  "fullName": "Bob Johnson",
+  "dateOfBirth": "1985-03-03",
+  "gender": "Male",
+  "address": "901 Maple St, Thistown, USA",
+  "contactInfo": "bob.johnson@example.com, 555-555-5557",
+  "maritalStatus": "Divorced",
+  "employmentStatus": "Self-Employed",
+  "voterID": {
+    "$numberLong": "34566543289"
+  },
+  "employerDetails": "Own business",
+  "taxCode": "9012",
+  "nationality": "American",
+  "dateOfIssueOfNIN": "2015-01-01",
+  "placeOfBirth": "Thistown, USA",
+  "previousAddresses": [
+    "678 Birch St, Thistown, USA"
+  ],
+  "benefitsReceived": [],
+  "contributionRecord": "Self-employed since 2016",
+  "immigrationStatus": "Citizen",
+  "healthInfo": "None",
+  "dependentsInfo": "None",
+  "educationAndQualifications": "Associate's degree in Business Administration",
+  "criminalRecord": null,
+  "disabilityStatus": "No"
+},
+{
+  "_id": {
+    "$oid": "665f4d349cb890818c982b52"
+  },
+  "NIN": 1111111111,
+  "fullName": "Alice Johnson",
+  "dateOfBirth": "1995-06-06",
+  "gender": "Female",
+  "address": "1234 Maple St, Anytown, USA",
+  "contactInfo": "alice.johnson@example.com, 555-555-5551",
+  "maritalStatus": "Single",
+  "employmentStatus": "Employed",
+  "voterID": {
+    "$numberLong": "78909871234"
+  },
+  "employerDetails": "DEF Corporation",
+  "taxCode": "1111",
+  "nationality": "American",
+  "dateOfIssueOfNIN": "2015-01-01",
+  "placeOfBirth": "Anytown, USA",
+  "previousAddresses": [
+    "5678 Oak St, Anytown, USA"
+  ],
+  "benefitsReceived": [],
+  "contributionRecord": "Employed since 2018",
+  "immigrationStatus": "Citizen",
+  "healthInfo": "None",
+  "dependentsInfo": "None",
+  "educationAndQualifications": "Bachelor's degree in Computer Science",
+  "criminalRecord": null,
+  "disabilityStatus": "No",
+  "__v": 1,
+  "updatedAt": {
+    "$date": "2024-06-29T12:37:33.640Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "665f4d349cb890818c982b53"
+  },
+  "NIN": {
+    "$numberLong": "2222222222"
+  },
+  "fullName": "Charlie Brown",
+  "dateOfBirth": "1980-07-07",
+  "gender": "Male",
+  "address": "9876 Elm St, Othertown, USA",
+  "contactInfo": "charlie.brown@example.com, 555-555-5552",
+  "maritalStatus": "Married",
+  "employmentStatus": "Unemployed",
+  "voterID": {
+    "$numberLong": "12300984321"
+  },
+  "employerDetails": "None",
+  "taxCode": "2222",
+  "nationality": "American",
+  "dateOfIssueOfNIN": "2010-01-01",
+  "placeOfBirth": "Othertown, USA",
+  "previousAddresses": [
+    "3456 Pine St, Othertown, USA"
+  ],
+  "benefitsReceived": [
+    "Unemployment benefits"
+  ],
+  "contributionRecord": "None",
+  "immigrationStatus": "Citizen",
+  "healthInfo": "None",
+  "dependentsInfo": "1 child",
+  "educationAndQualifications": "High school diploma",
+  "criminalRecord": null,
+  "disabilityStatus": "No",
+  "__v": 1,
+  "updatedAt": {
+    "$date": "2024-06-29T12:50:16.692Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "665f4d349cb890818c982b54"
+  },
+  "NIN": {
+    "$numberLong": "3333333333"
+  },
+  "fullName": "David Lee",
+  "dateOfBirth": "1990-08-08",
+  "gender": "Male",
+  "address": "7777 Cherry St, Thistown, USA",
+  "contactInfo": "david.lee@example.com, 555-555-5553",
+  "maritalStatus": "Single",
+  "voterID": {
+    "$numberLong": "49863456783"
+  },
+  "employmentStatus": "Part-time",
+  "employerDetails": "GHI Corporation",
+  "taxCode": "3333",
+  "nationality": "American",
+  "dateOfIssueOfNIN": "2012-01-01",
+  "placeOfBirth": "Thistown, USA",
+  "previousAddresses": [
+    "6666 Birch St, Thistown, USA"
+  ],
+  "benefitsReceived": [],
+  "contributionRecord": "Part-time since 2016",
+  "immigrationStatus": "Citizen",
+  "healthInfo": "None",
+  "dependentsInfo": "None",
+  "educationAndQualifications": "Associate's degree in Business Administration",
+  "criminalRecord": null,
+  "disabilityStatus": "No"
+}]
